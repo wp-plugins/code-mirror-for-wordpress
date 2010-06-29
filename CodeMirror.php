@@ -8,7 +8,7 @@
  Version: 1.0.0
  */
 class CodeMirror {
-    private $_version = '1.0.0';
+    private $_version = '1.0.1';
 
     public function __construct() {
         $this->addAction();
@@ -17,6 +17,8 @@ class CodeMirror {
     public function addAction() {
         add_action('admin_print_scripts-theme-editor.php', array($this, 'scriptInsert'));
         add_action('admin_print_styles-theme-editor.php', array($this, 'styleInsert'));
+        add_action('admin_print_scripts-plugin-editor.php', array($this, 'scriptInsert'));
+        add_action('admin_print_styles-plugin-editor.php', array($this, 'styleInsert'));
         add_action('admin_footer', array($this, 'runCodeMirror'));
     }
 
@@ -30,7 +32,7 @@ class CodeMirror {
 
     public function runCodeMirror() {
         global $pagenow;
-        if ($pagenow !== 'theme-editor.php') return;
+        if ($pagenow !== 'theme-editor.php' && $pagenow !== 'plugin-editor.php') return;
         $jsurl = plugins_url('', __FILE__) . '/js/';
         $cssurl = plugins_url('', __FILE__) . '/css/';
         $str = <<< EOF
@@ -49,6 +51,5 @@ class CodeMirror {
 EOF;
         _e($str);
     }
-
 }
 $codemirror = new CodeMirror();
