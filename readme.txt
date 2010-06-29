@@ -1,7 +1,7 @@
 === CodeMirror for WordPress ===
 Contributors: localdisk
-Donate link: 
-Tags: admin, theme, code
+Donate link:
+Tags: admin, theme, code, plugin, editor
 Requires at least: 2.6.0
 Tested up to: 3.0.0
 Stable tag: 1.0.1
@@ -21,12 +21,14 @@ http://marijn.haverbeke.nl/codemirror/
 
 == Installation ==
 
-1.Extract the zip file code-mirror-for-wordpress.n.zip
+1. Extract the zip file code-mirror-for-wordpress.n.zip
 2. Upload folder `code-mirror-for-wordpress` to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
-1.Demo
+
+1.Theme Editor Preview
+2.Plugin Editor Preview
 
 == Changelog ==
 
