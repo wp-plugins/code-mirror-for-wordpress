@@ -5,7 +5,7 @@
  Author URI: http://d.hatena.ne.jp/localdisk/
  Plugin URI: http://d.hatena.ne.jp/localdisk/
  Description: Syntax highlighting Theme Editor
- Version: 1.0.0
+ Version: 1.0.1
  */
 class CodeMirror {
     private $_version = '1.0.1';
